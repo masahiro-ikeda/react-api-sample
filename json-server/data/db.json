@@ -1,0 +1,21 @@
+{
+    "user": {
+        "id": 1,
+        "name": "ikeda"
+    },
+
+    "Users": [
+        {
+            "id": 1,
+            "name": "yamada"
+        },
+        {
+            "id": 2,
+            "name": "takagi"
+        },
+        {
+            "id": 3,
+            "name": "nakai"
+        }
+    ]
+}

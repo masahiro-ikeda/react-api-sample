@@ -1,0 +1,23 @@
+version: '3'
+services:
+  react:
+    build: ./react
+    volumes:
+     - ./react/usr/src/app:/usr/src/app
+    command: sh -c "cd react-api-sample && yarn start"
+    ports:
+     - "13000:3000"
+  
+  json-server:
+    build: ./json-server
+    hostname: api
+    ports:
+      - "13001:3000"
+    volumes: 
+      - ./json-server/data/db.json:/data/db.json
+    command: json-server --watch db.json --host 0.0.0.0
+
+
+# 初回起動時
+# docker-compose run --rm node sh -c "npx create-react-app react-api-sample"
+# docker-compose up -d
